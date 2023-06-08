@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "08135679-60e4-419a-b26a-0ba4d3d3fc95",
+		"name": "Peliculas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7404659"
+	},
+	"item": [
+		{
+			"name": "getMovies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMovieForID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMovieForTitulo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/titulo/Scream 6",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"titulo",
+						"Scream 6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMovieForAnio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/anio/2023",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"anio",
+						"2023"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMovieForGenero",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/genero/Fantasia",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"genero",
+						"Fantasia"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\": \"Rapidos\",\r\n    \"director\": \"William\",\r\n    \"actores\": \"Esnehider\",\r\n    \"anio\": 2023,\r\n    \"genero\": \"Acción\",\r\n    \"descripcion\": \"Pelicula sobre valorada\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\": \"Rapidos10\",\r\n    \"director\": \"William\",\r\n    \"actores\": \"Esnehider\",\r\n    \"anio\": 2023,\r\n    \"genero\": \"Acción\",\r\n    \"descripcion\": \"Pelicula sobre valorada\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/5",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePatch",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\": \"Rapidos20\",\r\n    \"genero\": \"Fantasia\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/5",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/5",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "localhost:8762/ms-pelicula/peliculas",
+			"type": "string"
+		}
+	]
+}

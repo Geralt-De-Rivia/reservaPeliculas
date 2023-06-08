@@ -1,0 +1,30 @@
+## Configuracion de Spring
+spring:
+  application:
+    name: ms-pelicula
+  datasource:
+    url: jdbc:postgresql://localhost:5432/devmoviedb
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop
+
+## Configuracion de Instancia 
+server:
+  port: 8088
+
+## Configuracion del cliente de Eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
+    hostname: ms-peliculas
+
+

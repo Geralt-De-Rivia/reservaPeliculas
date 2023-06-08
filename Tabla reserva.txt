@@ -1,0 +1,9 @@
+CREATE DATABASE `movieoperaciondb`;
+
+CREATE TABLE `reserva` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `usuario` varchar(45) NOT NULL,
+  `pelicula_id` int NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `idreserva_UNIQUE` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

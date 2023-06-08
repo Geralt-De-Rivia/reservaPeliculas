@@ -1,0 +1,34 @@
+CREATE DATABASE `devmoviedb`;
+
+CREATE TABLE `pelicula` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(128) NOT NULL,
+  `descripcion` varchar(400) NOT NULL,
+  `genero` varchar(45) NOT NULL,
+  `director` varchar(50) NOT NULL,
+  `anio` varchar(4) NOT NULL,
+  `actores` varchar(400) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`),
+  UNIQUE KEY `titulo_UNIQUE` (`titulo`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+insert into pelicula(titulo,descripcion,genero,director,anio,actores) values
+('Avatar','Pelicula de aventura espacial','Aventura','Tim Burton','2010','Alec Baldwin, Geena Davis, Annie McEnroe, Maurice Page'),
+('Guardianes Galaxia','Pelicula de Acción','Acción','Peter Faiman','2023','Paul Hogan, Linda Kozlowski, John Meillon'),
+('Fast X','Pelicula de Acción','Acción','Francis Ford Coppola','2023','Richard Gere, Gregory Hines, Diane Lane'),
+('Scream 6','Pelicula de Terror','Terror','Tyler Gillett','2020','Philippe Lord, Mathieu Giguère');
+
+
+//Postgres
+create table pelicula (
+	id bigserial not null, 
+	actores varchar(255), 
+	anio varchar(255), 
+	descripcion varchar(255), 
+	director varchar(255), 
+	genero varchar(255), 
+	titulo varchar(255), 
+	primary key (id)
+)
